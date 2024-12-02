@@ -1,0 +1,166 @@
+
+
+/*-------------------- HEADER --------------*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ce2829;
+  color: white;
+  padding: 1rem;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*-------------------- MAIN --------------*/
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: .7rem;
+    width: 100%; 
+    margin: 0 auto; /* Sağdan ve soldan eşit boşluk */
+    text-align: left; /* Tüm içerikleri sola yasla */
+}
+
+/*-------------------- ABOUT PIZZA --------------*/
+
+.pizza-name {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 30%;
+}
+
+.about-pizza {
+  width: 30%;
+}
+
+/*-------------------- CHOICE PART --------------*/
+
+.selector {
+    display: flex;
+    gap: 8rem;
+    
+}
+
+/*-------------------- CHOICE SIZE --------------*/
+
+.select-size {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px; 
+}
+
+.radio-button label {
+  display: block; 
+  margin-bottom: 10px; 
+  text-align: left; 
+  cursor: pointer; 
+}
+
+/*-------------------- CHOICE PASTRY --------------*/
+
+/*-------------------- CHOICE INGREDIENT --------------*/
+
+
+.extra {
+    margin: 1rem 0;
+  }
+  
+  .extra p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .choice {
+    display: flex; 
+    gap: 1rem; 
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+  
+  /*-------------------- not ekleme kismi --------------*/
+
+  .order-note {
+    margin: 1rem 0;
+  }
+  
+  .order-note p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .textarea {
+    width: 24rem; 
+    height: 2rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-justify: center;
+    resize: none;
+  }
+  
+  .textarea:focus {
+    border-color: #ce2829; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(206, 40, 41, 0.5); 
+  }
+
+  /*-------------------- pizza sayi artirma butonu--------------*/
+  .input-group {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    width: 3rem;
+    font-size: 1.5rem;
+  }
+  
+  .input-group-text {
+    width: 3rem;
+    text-align: center;
+  }
+
+    /*-------------------- son kisim --------------*/
+
+    .last-part {
+        display: flex;
+        width: 60%;
+        align-items: start;
+    }
+
+
+
