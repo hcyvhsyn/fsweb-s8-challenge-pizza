@@ -1,0 +1,32 @@
+.order-confirm {
+    background-color: #CE2829;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.logo {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+}
+
+.h2 {
+    margin-top: 320px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+}
+
+.message {
+    font-size: 3rem; 
+    text-align: center; 
+    width: 25%;
+    line-height: 6rem;
+    font-weight: 400;
+    font-family: "Roboto Condensed";
+    margin-top: 1rem;
+    color: white;
+}

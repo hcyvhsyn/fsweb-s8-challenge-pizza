@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css'
 import MainPage from './components/MainPage'
 import OrderPage from './components/OrderPage'; 
+import OrderConfirm from './components/OrderConfirm';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
 
         <Route exact path="/order">
           <OrderPage />
+        </Route>
+
+        <Route exact path="/success">
+          <OrderConfirm />
         </Route>
       </Switch>
     </Router>

@@ -5,36 +5,31 @@
     background-position: center center;
     height: 100vh; 
     padding: 1rem;
-
 }
 
+img.brend-name {
+    display: block;
+    margin: 0 auto; 
+    width: 200px;
+    margin-top: 3rem;
+    width: 300px;
+}
 
-.brend-name {
+.div-slogane {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2.5rem;
-    font-family: "Roboto Condensed", sans-serif;
-    padding: 1rem;
-}
-
-.h2 {
-    display: flex; 
     justify-content: center; 
     align-items: center; 
-    color: white; 
-
+    width: 100%; 
+    margin-top: 9rem;
+    text-align: center; 
 }
 
 .slogane {
-    font-size: 3rem; /* Yazı boyutu */
-    text-align: center; /* Yazıyı ortalar */
+    font-size: 3rem; 
+    text-align: center; 
     width: 30%;
-    line-height: 6rem;
     font-weight: 400;
     font-family: "Barlow";
-    margin-top: 1rem;
     color: white;
 }
 
@@ -42,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
 
 }
 
