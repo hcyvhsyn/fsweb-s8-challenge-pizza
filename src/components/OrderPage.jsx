@@ -12,6 +12,7 @@ import "../styles/OrderPage.css";
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
+import Footer from "./Footer";
 
 const OrderPage = () => {
   const [malzemeSecimi, setMalzemeSecimi] = useState([]);
@@ -54,35 +55,56 @@ const OrderPage = () => {
       alert("En az 4 malzeme seçmelisiniz.");
       return;
     }
-    if (!document.querySelector('input[name="pass"]:checked')) {
+
+    const selectedSize = document.querySelector('input[name="pass"]:checked');
+    if (!selectedSize) {
       alert("Lütfen pizza boyutunu seçin.");
       return;
     }
-    if (!document.getElementById("pizza").value) {
+    const pizzaSize = selectedSize.value;
+
+    const pizzaCrust = document.getElementById("pizza").value;
+    if (!pizzaCrust) {
       alert("Lütfen hamur kalınlığını seçin.");
       return;
     }
-    history.push("/success");
+
+    history.push({
+      pathname: "/success",
+      state: {
+        size: pizzaSize,
+        crust: pizzaCrust,
+        toppings: malzemeSecimi,
+        total: calculateTotal().toFixed(2),
+        toppingsTotal: (malzemeSecimi.length * extraPrice).toFixed(2),
+      },
+    });
   };
-
-
 
   return (
     <div className="order-page">
-      <header>
-      <img
-          className="logo"
-          src="https://raw.githubusercontent.com/Workintech/fsweb-s8-challenge-pizza/8f9b6dbeba34ed8e9b45ce243e72feb9bae7be62/images/iteration-1-images/logo.svg"
+      <header className="order-header">
+        <div className="logo">
+          <img
+            src="https://raw.githubusercontent.com/Workintech/fsweb-s8-challenge-pizza/8f9b6dbeba34ed8e9b45ce243e72feb9bae7be62/images/iteration-1-images/logo.svg"
+            alt=""
+          />
+        </div>
+
+        <img
+          className="header-banner"
+          src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/pictures/form-banner.png?raw=true"
           alt=""
         />
 
         <nav>
           <Link to="/main">Ana Sayfa-</Link>
           <Link to="/">Seçenekler-</Link>
-          <Link to="/order">Sipariş Oluştur</Link>
+          <Link style={{color:"red"}} to="/order">Sipariş Oluştur</Link>
         </nav>
       </header>
-      <Container className="all">
+
+      <div className="all">
         <p className="pizza-name">Position Absolute Acı Pizza</p>
         <div className="price">
           <p className="price-tl">85,50 ₺</p>
@@ -102,24 +124,28 @@ const OrderPage = () => {
             <p>
               Boyut Seç <span style={{ color: "red" }}>*</span>
             </p>
-
-            <label>
-              <input type="radio" name="pass" value="Küçük" /> Küçük
-            </label>
-            <label>
-              <input type="radio" name="pass" value="Orta" /> Orta
-            </label>
-            <label>
-              <input type="radio" name="pass" value="Büyük" /> Büyük
-            </label>
+            <div className="labellar">
+              <label className="custom-radio">
+                <input type="radio" name="pass" value="Küçük" />
+                <span className="harf">K</span>
+              </label>
+              <label className="custom-radio">
+                <input type="radio" name="pass" value="Orta" />
+                <span className="harf">O</span>
+              </label>
+              <label className="custom-radio">
+                <input type="radio" name="pass" value="Büyük" />
+                <span className="harf">B</span>
+              </label>
+            </div>
           </div>
           <div className="select-type">
             <p>
               Hamur Seç<span style={{ color: "red" }}>*</span>
             </p>
-            <select name="pizza" id="pizza">
+            <select className="hamurSecimi" name="pizza" id="pizza">
               <option value="" disabled selected>
-                Hamur Kalınlığı
+                Hamur Kalınlığı Seç
               </option>
               <option value="ince">İnce</option>
               <option value="orta">Orta</option>
@@ -130,7 +156,7 @@ const OrderPage = () => {
 
         <div className="extra">
           <p>Ek Malzemeler</p>
-          <p>En Fazla 10 malzeme secebilirsiniz. 5TL</p>
+          <p style={{fontWeight:"200"}}>En Fazla 10 malzeme seçebilirsin. 5TL</p>
           <div className="choice">
             <div className="column">
               <label>
@@ -178,6 +204,8 @@ const OrderPage = () => {
                 />{" "}
                 Soğan
               </label>
+              </div>
+              <div class="column">
               <label>
                 <input
                   type="checkbox"
@@ -187,8 +215,8 @@ const OrderPage = () => {
                 />{" "}
                 Domates
               </label>
-            </div>
-            <div class="column">
+            
+            
               <label>
                 <input
                   type="checkbox"
@@ -225,6 +253,8 @@ const OrderPage = () => {
                 />{" "}
                 Sarımsak
               </label>
+              </div>
+              <div class="column">
               <label>
                 <input
                   type="checkbox"
@@ -234,6 +264,7 @@ const OrderPage = () => {
                 />{" "}
                 Biber
               </label>
+
               <label>
                 <input
                   type="checkbox"
@@ -243,8 +274,8 @@ const OrderPage = () => {
                 />{" "}
                 Kekik
               </label>
-            </div>
-            <div class="column">
+            
+            
               <label>
                 <input
                   type="checkbox"
@@ -319,7 +350,8 @@ const OrderPage = () => {
             </CardBody>
           </Card>
         </div>
-      </Container>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };

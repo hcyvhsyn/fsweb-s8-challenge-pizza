@@ -1,13 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
 
 /*-------------------- HEADER --------------*/
-header {
+.order-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ce2829;
+  justify-content: center;
   color: white;
-  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FAF7F2;
+}
+
+.logo {
+  width: 100%;
+  height: 7rem;
+  background-color: #ce2829;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
 }
 nav {
   display: flex;
@@ -16,25 +42,34 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 100;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.header-banner {
+  width: 20rem;
+}
+
 /*-------------------- MAIN --------------*/
 
+.order-page {
+  display: flex;
+  flex-direction: column;
+}
+
 .all {
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-size: 0.7rem;
   width: 100%;
-  margin: 0 auto;
-  text-align: left;
-  margin-left: 500px;
-  padding-top: 1rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  margin-left: 850px;
 }
 
 /*-------------------- ABOUT PIZZA --------------*/
@@ -50,10 +85,9 @@ nav a {
 }
 
 .price {
-    width: 30%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
 }
 
 .about-pizza {
@@ -64,7 +98,7 @@ nav a {
 
 .selector {
   display: flex;
-  gap: 8rem;
+  gap: 9rem;
 }
 
 /*-------------------- CHOICE SIZE --------------*/
@@ -84,7 +118,67 @@ nav a {
   cursor: pointer;
 }
 
+.custom-radio-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.labellar {
+  display: flex;
+  gap: .7rem;
+}
+
+
+.custom-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #FAF7F2;
+  border-radius: 50%; 
+  cursor: pointer;
+  font-size: .7rem;
+  font-weight: 200;
+  transition: all 0.3s ease;
+}
+
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio span {
+  z-index: 1;
+  color: #292929;
+  text-align: center;
+}
+
+
+.custom-radio input[type="radio"]:checked + span {
+  color: #FDC913; 
+  transform: scale(1.1); 
+}
+
+.custom-radio:hover {
+  background-color: #eaeaea; 
+}
+
 /*-------------------- CHOICE PASTRY --------------*/
+
+.hamurSecimi {
+  background-color: #FAF7F2;
+  border: none;
+  padding: .5rem;
+  margin-top: .5rem;
+  font-size: .6rem;
+}
+
+
 
 /*-------------------- CHOICE INGREDIENT --------------*/
 
@@ -105,7 +199,7 @@ nav a {
 .column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 label {
@@ -113,6 +207,67 @@ label {
   align-items: center;
   gap: 0.5rem;
 }
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+}
+
+
+.column label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 1.2rem; 
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+
+.column input[type="checkbox"] {
+  appearance: none; 
+  width: 24px; 
+  height: 24px;
+  border: 2px solid #ddd; 
+  border-radius: 4px; 
+  background-color:  #FAF7F2; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.column input[type="checkbox"]:hover {
+  border-color: #FDC913;
+}
+
+
+.column input[type="checkbox"]:checked {
+  background-color: #FDC913; 
+  border-color: #FDC913;
+  position: relative;
+}
+
+
+.column input[type="checkbox"]:checked::after {
+  content: "✔"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.column label:hover {
+  color: #FDC913;
+}
+
+
 
 /*-------------------- not ekleme kismi --------------*/
 
@@ -135,6 +290,7 @@ label {
   font-size: 0.7rem;
   text-justify: center;
   resize: none;
+  background-color: #FAF7F2;
 }
 
 .textarea:focus {
@@ -147,28 +303,30 @@ label {
 
 .last-part {
   display: flex;
-  gap: 3px;
-  width: 35%;
-  align-items: start;
-  padding: 2px;
+  gap: 1rem;
+  width: auto;
+  align-items: first baseline;
+  padding: 1rem;
+  width: 40%;
+  
 }
 
 .shadow-sm {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #FAF7F2;
 }
 
 .custom-button {
-    background-color: #FDC913;
-    border: none;
-    color: black !important;
-    font-weight: 300 !important;
+  background-color: #fdc913;
+  border: none;
+  color: black !important;
+  font-weight: 300 !important;
 }
 
 .custom-button:hover {
-    background-color: #FFA500;
-    border: none;
-    color: black !important;
-    font-weight: 600 !important;
+  background-color: #ffa500;
+  border: none;
+  color: black !important;
+  font-weight: 600 !important;
 }
-
