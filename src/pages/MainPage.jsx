@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/Footer";
-import Header from "../components/MainPage/Header";
-import RestauranMenu from "../components/MainPage/RestauranMenu";
-import PopularMeals from "../components/mainpage/PopularMeals";
-import BestPriceMeals from "../components/mainpage/BestPriceMeals";
+import Header from "../components/Header";
+import RestauranMenu from "../components/RestauranMenu";
+import PopularMeals from "../components/PopularMeals";
+import BestPriceMeals from "../components/BestPriceMeals";
 
 const MainPage = () => {
   return (
