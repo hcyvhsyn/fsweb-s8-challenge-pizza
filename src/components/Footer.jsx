@@ -1,32 +1,34 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
     <div>
-        <footer>
-        <div className="footer-main-part">
-          <div className="addres-main">
+      <footer>
+        <div className="flex bg-[#292929] justify-around px-40 h-[500px] items-center">
+          <div className="flex flex-col text-white  justify-center items-start gap-10">
             <img
+              height={100}
+              width={160}
               src="https://raw.githubusercontent.com/Workintech/fsweb-s8-challenge-pizza/8f9b6dbeba34ed8e9b45ce243e72feb9bae7be62/images/iteration-2-images/footer/logo-footer.svg"
               alt=""
             />
 
-            <address>
-              <div className="address-part">
+            <address className="w-[400px] flex flex-col gap-7">
+              <div className="flex gap-3">
                 <img
                   src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/icons/icon-1.png?raw=true"
                   alt=""
                 />
                 <p> 341 Londonderry Road, Istanbul Turkiye</p>
               </div>
-              <div className="address-part">
+              <div className="flex gap-3">
                 <img
                   src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/icons/icon-2.png?raw=true"
                   alt=""
                 />
                 <p> aciktim@teknolojikyemekler.com</p>
               </div>
-              <div className="address-part">
+              <div className="flex gap-3">
                 <img
                   src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/icons/icon-3.png?raw=true"
                   alt=""
@@ -35,42 +37,55 @@ function Footer() {
               </div>
             </address>
           </div>
-          <div className="menuler">
-            <h5>Sıcacık Menüler</h5>
-            <p>Terminal Pizza</p>
-            <p>5 Kişilik Hackathlon Pizza</p>
-            <p>useEffect Tavuklu Pizza</p>
-            <p>Beyaz Console Frosty</p>
-            <p>Testler Geçtı Mutlu Burger</p>
-            <p>Position Absolute Acı Pizza</p>
+          <div className="text-white w-[200px]">
+            <h5 className="font-bold">Sıcacık Menüler</h5>
+            <p className="font-thin mt-7">Terminal Pizza</p>
+            <p className="font-thin">5 Kişilik Hackathlon Pizza</p>
+            <p className="font-thin">useEffect Tavuklu Pizza</p>
+            <p className="font-thin">Beyaz Console Frosty</p>
+            <p className="font-thin">Testler Geçtı Mutlu Burger</p>
+            <p className="font-thin">Position Absolute Acı Pizza</p>
           </div>
-          <div>
-            <img
-              className="instagram"
-              src="https://www.logo.wine/a/logo/Instagram/Instagram-Wordmark-Logo.wine.svg"
-              alt=""
-            />
-            <div className="instagram-photos">
-              <div className="instagram-mini-photos-1"></div>
-              <div className="instagram-mini-photos-2"></div>
-              <div className="instagram-mini-photos-3"></div>
+          <div className="flex flex-col gap-4">
+            <h1 className="text-white">INSTAGRAM</h1>
+            <div className="flex gap-2 rounded-3xl">
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-0.png?raw=true"
+                alt=""
+              />
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-1.png?raw=true"
+                alt=""
+              />
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-2.png?raw=true"
+                alt=""
+              />
             </div>
-            <div className="instagram-photos">
-              <div className="instagram-mini-photos-4"></div>
-              <div className="instagram-mini-photos-5"></div>
-              <div className="instagram-mini-photos-6"></div>
+            <div className="flex gap-2 rounded-3xl">
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-3.png?raw=true"
+                alt=""
+              />
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-4.png?raw=true"
+                alt=""
+              />
+              <img
+                src="https://github.com/Workintech/fsweb-s8-challenge-pizza/blob/main/images/iteration-2-images/footer/insta/li-5.png?raw=true"
+                alt=""
+              />
             </div>
           </div>
         </div>
 
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-          <hr style={{ color: "#5F5F5F" }}/>
-          <p style={{ color: "#5F5F5F" }}>2023 Teknolojik Yemekler</p>
+        <div className="flex flex-col items-center bg-slate-800">
+          <hr className="bg-white" />
+          <p className="text-white ">2023 Teknolojik Yemekler</p>
         </div>
       </footer>
-      
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

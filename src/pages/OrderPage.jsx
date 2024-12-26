@@ -8,11 +8,11 @@ import {
   CardTitle,
   Container,
 } from "reactstrap";
-import "../styles/OrderPage.css";
+
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const OrderPage = () => {
   const [malzemeSecimi, setMalzemeSecimi] = useState([]);
@@ -82,7 +82,7 @@ const OrderPage = () => {
   };
 
   return (
-    <div className="order-page">
+    <div className="flex flex-col items">
       <header className="order-header">
         <div className="logo">
           <img
