@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 import Footer from "../components/Footer";
+import "../styles/OrderPage.css"; 
 
 const OrderPage = () => {
   const [malzemeSecimi, setMalzemeSecimi] = useState([]);

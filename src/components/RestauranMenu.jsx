@@ -33,14 +33,16 @@ const RestauranMenu = () => {
   ];
 
   return (
-    <div className="flex justify-between mx-[400px] my-4">
+    <div className="flex justify-around my-4 mx-80">
       {menuItems.map((item) => (
         <div
           key={item.id}
           className="flex items-center rounded-full p-2 w-[180px] cursor-pointer hover:bg-[#ce2829] hover:text-white"
         >
-          <img src={item.img} alt={item.text} className="pr-4" />
-          <p>{item.text}</p>
+          <div className="">
+            <img src={item.img} alt={item.text} className="" />
+            <p>{item.text}</p>
+          </div>
         </div>
       ))}
     </div>

@@ -61,7 +61,7 @@ const BestPriceMeals = () => {
 
   
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className=" flex flex-col items-center text-center">
       <div className="mt-[9rem]">
         <p className="page-slogane font-[Satisfy] text-[#ce2829]">
           en çok paketlenen menüler
